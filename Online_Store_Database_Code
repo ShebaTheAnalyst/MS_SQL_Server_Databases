@@ -1,3 +1,5 @@
+Online Store Database Code
+
 -- Creating Customer Tables --
 
 CREATE TABLE Customers (
