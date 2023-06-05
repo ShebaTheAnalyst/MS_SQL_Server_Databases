@@ -1,0 +1,45 @@
+Music Library Database Code
+
+-- Creating Artists Table --
+
+CREATE TABLE Artists (
+artist_id INT PRIMARY KEY,
+artist_name VARCHAR(50)
+);
+
+-- Creating Albums Table --
+
+CREATE TABLE Albums (
+album_id INT PRIMARY KEY,
+album_title VARCHAR(100),
+artist_id INT,
+release_year DATE,
+FOREIGN KEY (artist_id) REFERENCES Artists(artist_id)
+);
+
+-- Creating Songs Table --
+
+CREATE TABLE Songs (
+song_id INT PRIMARY KEY,
+song_title VARCHAR(50),
+album_id INT,
+duration TIME,
+genre VARCHAR(50),
+FOREIGN KEY (album_id) REFERENCES Albums(album_id)
+);
+
+-- Creating Playlists Table --
+
+CREATE TABLE Playlists (
+playlist_id INT PRIMARY KEY,
+playlist_name VARCHAR(100)
+);
+
+-- Creating Playlist Songs Table --
+
+CREATE TABLE PlaylistSongs (
+playlist_id INT,
+song_id INT,
+FOREIGN KEY (playlist_id) REFERENCES Playlists(playlist_id),
+FOREIGN KEY (song_id) REFERENCES Songs(song_id)
+);
