@@ -132,3 +132,18 @@ INSERT INTO Artists VALUES
 (83, 'Wolfgang Gartner'),
 (84, 'Yaya Bey'),
 (85, 'Zedd');
+
+-- Album Data Insert Code --
+
+INSERT INTO Albums VALUES
+(2, 'Honestly, Nevermind', 14, '2022-06-17');
+
+I used this code for all the albums I included in my data separating each album
+insert with a comma and adding the semicolon when finished.
+
+*EXAMPLE*
+INSERT INTO Albums VALUES
+(album_id, 'album_title', artist_id, 'release_date'),
+(album_id, 'album_title', artist_id, 'release_date'),
+(album_id, 'album_title', artist_id, 'release_date'),
+(album_id, 'album_title', artist_id, 'release_date');
